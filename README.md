@@ -1,2 +1,75 @@
 # ru-blocklist-aggregator
-Unified Russian blocklist aggregated from multiple sources
+
+[🇬🇧 English](README.en.md) • 🇷🇺 Русский
+
+![License](https://img.shields.io/github/license/AbbeyLubber/ru-blocklist-aggregator)
+![Last Commit](https://img.shields.io/github/last-commit/AbbeyLubber/ru-blocklist-aggregator)
+
+Единый список заблокированных в России доменов, собранный из нескольких источников, плюс актуальный список IP-подсетей Telegram. Обновляется еженедельно.
+
+## О проекте
+
+Несколько активно поддерживаемых проектов ведут собственные списки заблокированных в России доменов — каждый в своём формате и со своим циклом обновления. Этот репозиторий объединяет их в чистые списки без дублей — единый источник, на который можно настроить DNS-фильтр, прокси или роутер, вместо того чтобы следить за несколькими источниками по отдельности. Отдельно публикуется актуальный список IP-подсетей Telegram из официального источника.
+
+## Источники доменов
+
+| Источник | Что предоставляет |
+|---|---|
+| [Nidelon/ru-block-v2ray-rules](https://github.com/Nidelon/ru-block-v2ray-rules) | Правила блокировки доменов для маршрутизации в Xray/V2Ray |
+| [savely-krasovsky/antizapret-sing-box](https://github.com/savely-krasovsky/antizapret-sing-box) | Списки доменов на основе Antizapret |
+| [runetfreedom/russia-blocked-geosite](https://github.com/runetfreedom/russia-blocked-geosite) | Объединённый список РКН + community + re:filter |
+| [Noktomezo/RussiaFancyLists](https://github.com/Noktomezo/RussiaFancyLists/blob/main/lists/blacklist/domains/full.lst) (`full.lst`) | Курируемый, автообновляемый список доменов |
+
+## Файлы
+
+| Файл | Содержимое |
+|---|---|
+| `blocklist.txt` | Домены, по одному на строку, без wildcard-масок — максимальная совместимость (hosts-файлы, MikroTik `match-subdomain=yes`, exact-match блокировщики) |
+| `blocklist-wildcard.txt` | Те же домены, с префиксом `*.` там, где источник указывает на блокировку поддоменов — для AdGuard Home, sing-box и других инструментов с поддержкой wildcard |
+| `telegram-ipv4.txt` | Актуальные IPv4-подсети Telegram из официального источника CIDR |
+| `telegram-ipv6.txt` | Актуальные IPv6-подсети Telegram из официального источника CIDR |
+
+## Расписание обновлений
+
+Списки доменов обновляются **еженедельно**: источники скачиваются заново, приводятся к единому формату, объединяются и очищаются от дублей. Список Telegram (`telegram-ipv4.txt`, `telegram-ipv6.txt`) обновляется **раз в сутки**. Актуальность обновления можно проверить по истории коммитов.
+
+## Формат
+
+**Домены** — обычный текст, один домен на строку, без комментариев. В `blocklist-wildcard.txt` часть строк начинается с `*.`.
+
+```
+example.com
+*.another-domain.ru
+```
+
+**IP (Telegram)** — CIDR-нотация, один диапазон на строку, IPv4 и IPv6 в отдельных файлах.
+
+```
+91.108.56.0/22
+2001:b28:f23d::/48
+```
+
+## Использование
+
+**AdGuard Home / Pi-hole** — добавь как источник кастомного блок-листа:
+```
+https://raw.githubusercontent.com/AbbeyLubber/ru-blocklist-aggregator/main/blocklist-wildcard.txt
+```
+
+**hosts-файл** — используй `blocklist.txt`, добавь `0.0.0.0` или `127.0.0.1` перед каждой строкой.
+
+**Xray / sing-box / v2ray** — `blocklist-wildcard.txt` как источник доменного правила маршрутизации, `telegram-ipv4.txt` / `telegram-ipv6.txt` — отдельным IP-правилом (например, чтобы направлять трафик Telegram напрямую, минуя прокси).
+
+**MikroTik (RouterOS v7)** — DNS-based address-list из `blocklist.txt`; поддомены — через `match-subdomain=yes` в правиле, без wildcard в самой строке.
+
+## Дисклеймер
+
+Этот репозиторий агрегирует уже общедоступные данные из открытых источников в информационных и исследовательских целях. Здесь нет инструментов обхода блокировок, прокси или VPN — только справочные списки доменов и IP-адресов.
+
+Проект не аффилирован ни с одним из перечисленных источников и не может гарантировать точность, полноту или актуальность их данных. Материалы предоставляются «как есть», без каких-либо гарантий, явных или подразумеваемых.
+
+Как и в каких целях использовать эти списки — решение и ответственность самого пользователя, включая соблюдение законодательства своей юрисдикции.
+
+## Лицензия
+
+Распространяется под лицензией [AGPL-3.0](LICENSE).
