@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/github/license/AbbeyLubber/ru-blocklist-aggregator)
 ![Last Commit](https://img.shields.io/github/last-commit/AbbeyLubber/ru-blocklist-aggregator)
 
-Единый список заблокированных в России доменов, собранный из нескольких источников, плюс актуальный список IP-подсетей Telegram. Обновляется еженедельно.
+Единый список заблокированных в России доменов, собранный из нескольких источников, плюс актуальный список IP-подсетей Telegram. Обновляется автоматически.
 
 ## О проекте
 
@@ -24,14 +24,29 @@
 
 | Файл | Содержимое |
 |---|---|
-| `blocklist.txt` | Домены, по одному на строку, без wildcard-масок — максимальная совместимость (hosts-файлы, MikroTik `match-subdomain=yes`, exact-match блокировщики) |
-| `blocklist-wildcard.txt` | Те же домены, с префиксом `*.` там, где источник указывает на блокировку поддоменов — для AdGuard Home, sing-box и других инструментов с поддержкой wildcard |
-| `telegram-ipv4.txt` | Актуальные IPv4-подсети Telegram из официального источника CIDR |
-| `telegram-ipv6.txt` | Актуальные IPv6-подсети Telegram из официального источника CIDR |
+| `blocklist/blocklist.txt` | Домены, по одному на строку, без wildcard-масок — максимальная совместимость (hosts-файлы, MikroTik `match-subdomain=yes`, exact-match блокировщики) |
+| `blocklist/blocklist-wildcard.txt` | Те же домены, с префиксом `*.` там, где источник указывает на блокировку поддоменов — для AdGuard Home, sing-box и других инструментов с поддержкой wildcard |
+| `Telegram/telegram-ipv4.txt` | Актуальные IPv4-подсети Telegram из официального источника CIDR |
+| `Telegram/telegram-ipv6.txt` | Актуальные IPv6-подсети Telegram из официального источника CIDR |
+
+## Статус списков
+
+Таблица ниже обновляется автоматически при каждой публикации — вручную не редактировать.
+
+<!-- STATUS-TABLE:START -->
+_Последняя проверка автоматикой: ещё не запускалась_
+
+| Файл | Обновлено | Строк | MD5 |
+|---|---|---|---|
+| `Telegram/telegram-ipv4.txt` | ещё не опубликован | — | — |
+| `Telegram/telegram-ipv6.txt` | ещё не опубликован | — | — |
+| `blocklist/blocklist.txt` | ещё не опубликован | — | — |
+| `blocklist/blocklist-wildcard.txt` | ещё не опубликован | — | — |
+<!-- STATUS-TABLE:END -->
 
 ## Расписание обновлений
 
-Списки доменов обновляются **еженедельно**: источники скачиваются заново, приводятся к единому формату, объединяются и очищаются от дублей. Список Telegram (`telegram-ipv4.txt`, `telegram-ipv6.txt`) обновляется **раз в сутки**. Актуальность обновления можно проверить по истории коммитов.
+Список Telegram (`Telegram/telegram-ipv4.txt`, `Telegram/telegram-ipv6.txt`) обновляется **каждые 12 часов** напрямую из официального источника. Списки доменов (`blocklist/blocklist.txt`, `blocklist/blocklist-wildcard.txt`) обновляются **еженедельно**: источники скачиваются заново, приводятся к единому формату, объединяются и очищаются от дублей — из списка домены только добавляются, старые записи не удаляются даже если источник их убрал. Точное время последнего обновления каждого файла — в таблице выше.
 
 ## Формат
 
@@ -53,14 +68,14 @@ example.com
 
 **AdGuard Home / Pi-hole** — добавь как источник кастомного блок-листа:
 ```
-https://raw.githubusercontent.com/AbbeyLubber/ru-blocklist-aggregator/main/blocklist-wildcard.txt
+https://raw.githubusercontent.com/AbbeyLubber/ru-blocklist-aggregator/main/blocklist/blocklist-wildcard.txt
 ```
 
-**hosts-файл** — используй `blocklist.txt`, добавь `0.0.0.0` или `127.0.0.1` перед каждой строкой.
+**hosts-файл** — используй `blocklist/blocklist.txt`, добавь `0.0.0.0` или `127.0.0.1` перед каждой строкой.
 
-**Xray / sing-box / v2ray** — `blocklist-wildcard.txt` как источник доменного правила маршрутизации, `telegram-ipv4.txt` / `telegram-ipv6.txt` — отдельным IP-правилом (например, чтобы направлять трафик Telegram напрямую, минуя прокси).
+**Xray / sing-box / v2ray** — `blocklist/blocklist-wildcard.txt` как источник доменного правила маршрутизации, `Telegram/telegram-ipv4.txt` / `Telegram/telegram-ipv6.txt` — отдельным IP-правилом (например, чтобы направлять трафик Telegram напрямую, минуя прокси).
 
-**MikroTik (RouterOS v7)** — DNS-based address-list из `blocklist.txt`; поддомены — через `match-subdomain=yes` в правиле, без wildcard в самой строке.
+**MikroTik (RouterOS v7)** — DNS-based address-list из `blocklist/blocklist.txt`; поддомены — через `match-subdomain=yes` в правиле, без wildcard в самой строке.
 
 ## Дисклеймер
 

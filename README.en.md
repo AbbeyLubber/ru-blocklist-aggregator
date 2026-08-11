@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/github/license/AbbeyLubber/ru-blocklist-aggregator)
 ![Last Commit](https://img.shields.io/github/last-commit/AbbeyLubber/ru-blocklist-aggregator)
 
-Unified Russian blocklist aggregated from multiple community sources, plus an up-to-date list of Telegram's IP ranges. Updated weekly.
+Unified Russian blocklist aggregated from multiple community sources, plus an up-to-date list of Telegram's IP ranges. Updated automatically.
 
 ## About
 
@@ -24,14 +24,29 @@ Several actively maintained projects track domains blocked in Russia, each in it
 
 | File | Contents |
 |---|---|
-| `blocklist.txt` | Domains, one per line, no wildcards — maximum compatibility (hosts files, MikroTik `match-subdomain=yes`, exact-match blockers) |
-| `blocklist-wildcard.txt` | Same domains, with a `*.` prefix where a source indicates subdomain blocking — for AdGuard Home, sing-box, and other wildcard-aware tools |
-| `telegram-ipv4.txt` | Telegram's current IPv4 subnets, from the official CIDR source |
-| `telegram-ipv6.txt` | Telegram's current IPv6 subnets, from the official CIDR source |
+| `blocklist/blocklist.txt` | Domains, one per line, no wildcards — maximum compatibility (hosts files, MikroTik `match-subdomain=yes`, exact-match blockers) |
+| `blocklist/blocklist-wildcard.txt` | Same domains, with a `*.` prefix where a source indicates subdomain blocking — for AdGuard Home, sing-box, and other wildcard-aware tools |
+| `Telegram/telegram-ipv4.txt` | Telegram's current IPv4 subnets, from the official CIDR source |
+| `Telegram/telegram-ipv6.txt` | Telegram's current IPv6 subnets, from the official CIDR source |
+
+## List status
+
+The table below is regenerated automatically on every publish — do not edit by hand.
+
+<!-- STATUS-TABLE:START -->
+_Last checked by automation: not run yet_
+
+| File | Updated | Lines | MD5 |
+|---|---|---|---|
+| `Telegram/telegram-ipv4.txt` | not published yet | — | — |
+| `Telegram/telegram-ipv6.txt` | not published yet | — | — |
+| `blocklist/blocklist.txt` | not published yet | — | — |
+| `blocklist/blocklist-wildcard.txt` | not published yet | — | — |
+<!-- STATUS-TABLE:END -->
 
 ## Update schedule
 
-Domain lists are refreshed **weekly**: sources are re-fetched, normalized to a single format, merged, and deduplicated. The Telegram lists (`telegram-ipv4.txt`, `telegram-ipv6.txt`) are refreshed **daily**. Check the commit history for the latest update time.
+The Telegram lists (`Telegram/telegram-ipv4.txt`, `Telegram/telegram-ipv6.txt`) are refreshed **every 12 hours** straight from the official source. Domain lists (`blocklist/blocklist.txt`, `blocklist/blocklist-wildcard.txt`) are refreshed **weekly**: sources are re-fetched, normalized to a single format, merged, and deduplicated — domains are only ever added, never removed even if a source drops them. Exact last-update time per file is in the table above.
 
 ## Format
 
@@ -53,14 +68,14 @@ example.com
 
 **AdGuard Home / Pi-hole** — add as a custom blocklist source:
 ```
-https://raw.githubusercontent.com/AbbeyLubber/ru-blocklist-aggregator/main/blocklist-wildcard.txt
+https://raw.githubusercontent.com/AbbeyLubber/ru-blocklist-aggregator/main/blocklist/blocklist-wildcard.txt
 ```
 
-**hosts file** — use `blocklist.txt`, prepend each line with `0.0.0.0` or `127.0.0.1`.
+**hosts file** — use `blocklist/blocklist.txt`, prepend each line with `0.0.0.0` or `127.0.0.1`.
 
-**Xray / sing-box / v2ray** — use `blocklist-wildcard.txt` as a domain-matcher source, `telegram-ipv4.txt` / `telegram-ipv6.txt` for a separate IP-based rule (e.g. routing Telegram traffic directly, bypassing the proxy).
+**Xray / sing-box / v2ray** — use `blocklist/blocklist-wildcard.txt` as a domain-matcher source, `Telegram/telegram-ipv4.txt` / `Telegram/telegram-ipv6.txt` for a separate IP-based rule (e.g. routing Telegram traffic directly, bypassing the proxy).
 
-**MikroTik (RouterOS v7)** — build a DNS-based address-list from `blocklist.txt`; subdomains via `match-subdomain=yes` on the rule, no wildcard needed in the string itself.
+**MikroTik (RouterOS v7)** — build a DNS-based address-list from `blocklist/blocklist.txt`; subdomains via `match-subdomain=yes` on the rule, no wildcard needed in the string itself.
 
 ## Disclaimer
 
