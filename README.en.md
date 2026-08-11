@@ -39,7 +39,7 @@ This repo also maintains `corp/` — a separate set of domain and IP-range lists
 The table below is regenerated automatically on every publish — do not edit by hand. `corp/` file status lives in its own table in [corp/README.en.md](corp/README.en.md), to keep this one short.
 
 <!-- STATUS-TABLE:START -->
-_Last checked by automation: 2026-08-11 15:33 UTC_
+_Last checked by automation: 2026-08-11 20:13 UTC_
 
 | File | Updated | Lines | MD5 |
 |---|---|---|---|
@@ -47,8 +47,8 @@ _Last checked by automation: 2026-08-11 15:33 UTC_
 | `Telegram/telegram-ipv6.txt` | 2026-08-11 12:10 UTC | 5 | `b40d044727025c645af8e507265b94e9` |
 | `blocked/rkn-domain.txt` | 2026-08-11 13:11 UTC | 1642507 | `f9669b97b0441e1f710ae51ad440244a` |
 | `blocked/rkn-with-wildcard.txt` | 2026-08-11 13:11 UTC | 3262892 | `41b4143479bfbf7045f5e90a98611bbc` |
-| `blocked/ipv4.txt` | not published yet | — | — |
-| `blocked/ipv6.txt` | not published yet | — | — |
+| `blocked/ipv4.txt` | 2026-08-11 20:13 UTC | 55005 | `750f1886f9fe05af62acda37fd4a72d4` |
+| `blocked/ipv6.txt` | 2026-08-11 20:13 UTC | 2971 | `49556c9297c3b3cc251bc66764a90071` |
 <!-- STATUS-TABLE:END -->
 
 ## Update schedule
