@@ -39,14 +39,14 @@
 Таблица ниже обновляется автоматически при каждой публикации — вручную не редактировать. Статус файлов `corp/` — в [corp/README.md](corp/README.md), отдельной таблицей, чтобы не захламлять эту.
 
 <!-- STATUS-TABLE:START -->
-_Последняя проверка автоматикой: ещё не запускалась_
+_Последняя проверка автоматикой: 2026-08-11 15:33 UTC_
 
 | Файл | Обновлено | Строк | MD5 |
 |---|---|---|---|
-| `Telegram/telegram-ipv4.txt` | ещё не опубликован | — | — |
-| `Telegram/telegram-ipv6.txt` | ещё не опубликован | — | — |
-| `blocked/rkn-domain.txt` | ещё не опубликован | — | — |
-| `blocked/rkn-with-wildcard.txt` | ещё не опубликован | — | — |
+| `Telegram/telegram-ipv4.txt` | 2026-08-11 12:10 UTC | 9 | `1fd618d8fde9205840fe6be10f90d66c` |
+| `Telegram/telegram-ipv6.txt` | 2026-08-11 12:10 UTC | 5 | `b40d044727025c645af8e507265b94e9` |
+| `blocked/rkn-domain.txt` | 2026-08-11 13:11 UTC | 1642507 | `f9669b97b0441e1f710ae51ad440244a` |
+| `blocked/rkn-with-wildcard.txt` | 2026-08-11 13:11 UTC | 3262892 | `41b4143479bfbf7045f5e90a98611bbc` |
 | `blocked/ipv4.txt` | ещё не опубликован | — | — |
 | `blocked/ipv6.txt` | ещё не опубликован | — | — |
 <!-- STATUS-TABLE:END -->
