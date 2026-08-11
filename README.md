@@ -34,12 +34,12 @@
 Таблица ниже обновляется автоматически при каждой публикации — вручную не редактировать.
 
 <!-- STATUS-TABLE:START -->
-_Последняя проверка автоматикой: 2026-08-11 12:09 UTC_
+_Последняя проверка автоматикой: 2026-08-11 12:10 UTC_
 
 | Файл | Обновлено | Строк | MD5 |
 |---|---|---|---|
-| `Telegram/telegram-ipv4.txt` | 2026-08-11 12:09 UTC | 9 | `7b5834459558b1b05b705272c3925523` |
-| `Telegram/telegram-ipv6.txt` | 2026-08-11 12:09 UTC | 5 | `54558ef533e63e04b940351eb6691da2` |
+| `Telegram/telegram-ipv4.txt` | 2026-08-11 12:10 UTC | 9 | `1fd618d8fde9205840fe6be10f90d66c` |
+| `Telegram/telegram-ipv6.txt` | 2026-08-11 12:10 UTC | 5 | `b40d044727025c645af8e507265b94e9` |
 | `blocklist/blocklist.txt` | ещё не опубликован | — | — |
 | `blocklist/blocklist-wildcard.txt` | ещё не опубликован | — | — |
 <!-- STATUS-TABLE:END -->
