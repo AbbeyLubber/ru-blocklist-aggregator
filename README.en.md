@@ -37,14 +37,16 @@ Several actively maintained projects track domains blocked in Russia, each in it
 The table below is regenerated automatically on every publish — do not edit by hand.
 
 <!-- STATUS-TABLE:START -->
-_Last checked by automation: 2026-08-11 12:10 UTC_
+_Last checked by automation: 2026-08-11 13:12 UTC_
 
 | File | Updated | Lines | MD5 |
 |---|---|---|---|
 | `Telegram/telegram-ipv4.txt` | 2026-08-11 12:10 UTC | 9 | `1fd618d8fde9205840fe6be10f90d66c` |
 | `Telegram/telegram-ipv6.txt` | 2026-08-11 12:10 UTC | 5 | `b40d044727025c645af8e507265b94e9` |
-| `blocked/rkn-domain.txt` | not published yet | — | — |
-| `blocked/rkn-with-wildcard.txt` | not published yet | — | — |
+| `blocked/rkn-domain.txt` | 2026-08-11 13:11 UTC | 1642507 | `f9669b97b0441e1f710ae51ad440244a` |
+| `blocked/rkn-with-wildcard.txt` | 2026-08-11 13:11 UTC | 3262892 | `41b4143479bfbf7045f5e90a98611bbc` |
+| `blocked/ipv4.txt` | not published yet | — | — |
+| `blocked/ipv6.txt` | not published yet | — | — |
 <!-- STATUS-TABLE:END -->
 
 ## Update schedule
