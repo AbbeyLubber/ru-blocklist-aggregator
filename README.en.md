@@ -34,12 +34,12 @@ Several actively maintained projects track domains blocked in Russia, each in it
 The table below is regenerated automatically on every publish — do not edit by hand.
 
 <!-- STATUS-TABLE:START -->
-_Last checked by automation: not run yet_
+_Last checked by automation: 2026-08-11 12:09 UTC_
 
 | File | Updated | Lines | MD5 |
 |---|---|---|---|
-| `Telegram/telegram-ipv4.txt` | not published yet | — | — |
-| `Telegram/telegram-ipv6.txt` | not published yet | — | — |
+| `Telegram/telegram-ipv4.txt` | 2026-08-11 12:09 UTC | 9 | `7b5834459558b1b05b705272c3925523` |
+| `Telegram/telegram-ipv6.txt` | 2026-08-11 12:09 UTC | 5 | `54558ef533e63e04b940351eb6691da2` |
 | `blocklist/blocklist.txt` | not published yet | — | — |
 | `blocklist/blocklist-wildcard.txt` | not published yet | — | — |
 <!-- STATUS-TABLE:END -->
