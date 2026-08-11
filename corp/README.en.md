@@ -40,7 +40,7 @@ Subsidiary entities in other countries (e.g. Wildberries KZ/GE/BY — same legal
 The table below is regenerated automatically on every publish — do not edit by hand.
 
 <!-- STATUS-TABLE:START -->
-_Last checked by automation: 2026-08-11 20:13 UTC_
+_Last checked by automation: 2026-08-11 21:04 UTC_
 
 | File | Updated | Lines | MD5 |
 |---|---|---|---|
@@ -54,7 +54,7 @@ _Last checked by automation: 2026-08-11 20:13 UTC_
 | `corp/mailgroup/mg-ipv4.txt` | 2026-08-11 15:05 UTC | 109 | `faacdf558fda28a9e9a13e7bb5a0980a` |
 | `corp/mailgroup/mg-ipv6.txt` | 2026-08-11 15:05 UTC | 9 | `5c310e7e1dd8ff2026c1778e26074e5f` |
 | `corp/sber/sber-domain.txt` | 2026-08-11 15:05 UTC | 101 | `c2d94bc87d09505210d10290bd64af42` |
-| `corp/sber/sber-ipv4.txt` | 2026-08-11 15:05 UTC | 37 | `b0c042bc8646a77c719ede3cdc5e844e` |
+| `corp/sber/sber-ipv4.txt` | 2026-08-11 21:03 UTC | 36 | `140d2855ddc1d9418587acb5d9602e1e` |
 | `corp/sber/sber-ipv6.txt` | 2026-08-11 15:05 UTC | 1 | `2559126dfbba4263bd5551d697137010` |
 | `corp/ozon/ozon-domain.txt` | 2026-08-11 15:05 UTC | 62 | `02b73b445034a78c12872e74b46e97ed` |
 | `corp/ozon/ozon-ipv4.txt` | 2026-08-11 15:05 UTC | 9 | `893e6fd94879ee0848a2a34e7639f15b` |
@@ -65,9 +65,9 @@ _Last checked by automation: 2026-08-11 20:13 UTC_
 | `corp/avito/av-domain.txt` | 2026-08-11 15:05 UTC | 3 | `b47d2fb44183ea8a676ec4f548df4014` |
 | `corp/avito/av-ipv4.txt` | 2026-08-11 15:05 UTC | 17 | `c6ae2ebacb4d38a3794f33421bd9f610` |
 | `corp/avito/av-ipv6.txt` | 2026-08-11 15:05 UTC | 0 | `d41d8cd98f00b204e9800998ecf8427e` |
-| `corp/banks/bank-domain.txt` | not published yet | — | — |
-| `corp/banks/bank-ipv4.txt` | not published yet | — | — |
-| `corp/banks/bank-ipv6.txt` | not published yet | — | — |
+| `corp/banks/bank-domain.txt` | 2026-08-11 21:03 UTC | 43 | `baaa9ef7a63f2f8ee9f5ca572aadaf85` |
+| `corp/banks/bank-ipv4.txt` | 2026-08-11 21:03 UTC | 106 | `42f0112c6e1539c9edeaefc7e5fec19c` |
+| `corp/banks/bank-ipv6.txt` | 2026-08-11 21:03 UTC | 1 | `47332936eb8c687efff5994e3aba06f1` |
 <!-- STATUS-TABLE:END -->
 
 ## Update schedule
