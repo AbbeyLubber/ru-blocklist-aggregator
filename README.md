@@ -24,10 +24,13 @@
 
 | Файл | Содержимое |
 |---|---|
-| `blocklist/blocklist.txt` | Домены, по одному на строку, без wildcard-масок — максимальная совместимость (hosts-файлы, MikroTik `match-subdomain=yes`, exact-match блокировщики) |
-| `blocklist/blocklist-wildcard.txt` | Те же домены, с префиксом `*.` там, где источник указывает на блокировку поддоменов — для AdGuard Home, sing-box и других инструментов с поддержкой wildcard |
+| `blocked/rkn-domain.txt` | Домены, по одному на строку, без wildcard-масок — максимальная совместимость (hosts-файлы, MikroTik `match-subdomain=yes`, exact-match блокировщики) |
+| `blocked/rkn-with-wildcard.txt` | Те же домены, с префиксом `*.` там, где источник указывает на блокировку поддоменов — для AdGuard Home, sing-box и других инструментов с поддержкой wildcard |
+| `blocked/ipv4.txt` | Заблокированные в России IPv4-подсети |
+| `blocked/ipv6.txt` | Заблокированные в России IPv6-подсети (если для данного релиза есть актуальный источник — см. таблицу статуса) |
 | `Telegram/telegram-ipv4.txt` | Актуальные IPv4-подсети Telegram из официального источника CIDR |
 | `Telegram/telegram-ipv6.txt` | Актуальные IPv6-подсети Telegram из официального источника CIDR |
+| `corp/*/…` | Домены и IP-диапазоны крупных российских сервисов (Яндекс, VK, Mail Group, Сбер, OZON, Wildberries, Avito, банковский сектор) — в разработке |
 
 ## Статус списков
 
@@ -40,24 +43,24 @@ _Последняя проверка автоматикой: 2026-08-11 12:10 UT
 |---|---|---|---|
 | `Telegram/telegram-ipv4.txt` | 2026-08-11 12:10 UTC | 9 | `1fd618d8fde9205840fe6be10f90d66c` |
 | `Telegram/telegram-ipv6.txt` | 2026-08-11 12:10 UTC | 5 | `b40d044727025c645af8e507265b94e9` |
-| `blocklist/blocklist.txt` | ещё не опубликован | — | — |
-| `blocklist/blocklist-wildcard.txt` | ещё не опубликован | — | — |
+| `blocked/rkn-domain.txt` | ещё не опубликован | — | — |
+| `blocked/rkn-with-wildcard.txt` | ещё не опубликован | — | — |
 <!-- STATUS-TABLE:END -->
 
 ## Расписание обновлений
 
-Список Telegram (`Telegram/telegram-ipv4.txt`, `Telegram/telegram-ipv6.txt`) обновляется **каждые 12 часов** напрямую из официального источника. Списки доменов (`blocklist/blocklist.txt`, `blocklist/blocklist-wildcard.txt`) обновляются **еженедельно**: источники скачиваются заново, приводятся к единому формату, объединяются и очищаются от дублей — из списка домены только добавляются, старые записи не удаляются даже если источник их убрал. Точное время последнего обновления каждого файла — в таблице выше.
+Список Telegram (`Telegram/telegram-ipv4.txt`, `Telegram/telegram-ipv6.txt`) обновляется **каждые 12 часов** напрямую из официального источника. Списки доменов (`blocked/rkn-domain.txt`, `blocked/rkn-with-wildcard.txt`) обновляются **еженедельно**: источники скачиваются заново, приводятся к единому формату, объединяются и очищаются от дублей — из списка домены только добавляются, старые записи не удаляются даже если источник их убрал. Точное время последнего обновления каждого файла — в таблице выше.
 
 ## Формат
 
-**Домены** — обычный текст, один домен на строку, без комментариев. В `blocklist-wildcard.txt` часть строк начинается с `*.`.
+**Домены** — обычный текст, один домен на строку, без комментариев. В `rkn-with-wildcard.txt` часть строк начинается с `*.`.
 
 ```
 example.com
 *.another-domain.ru
 ```
 
-**IP (Telegram)** — CIDR-нотация, один диапазон на строку, IPv4 и IPv6 в отдельных файлах.
+**IP (Telegram, blocked/ipv4.txt, blocked/ipv6.txt)** — CIDR-нотация, один диапазон на строку, IPv4 и IPv6 в отдельных файлах.
 
 ```
 91.108.56.0/22
@@ -68,14 +71,14 @@ example.com
 
 **AdGuard Home / Pi-hole** — добавь как источник кастомного блок-листа:
 ```
-https://raw.githubusercontent.com/AbbeyLubber/ru-blocklist-aggregator/main/blocklist/blocklist-wildcard.txt
+https://raw.githubusercontent.com/AbbeyLubber/ru-blocklist-aggregator/main/blocked/rkn-with-wildcard.txt
 ```
 
-**hosts-файл** — используй `blocklist/blocklist.txt`, добавь `0.0.0.0` или `127.0.0.1` перед каждой строкой.
+**hosts-файл** — используй `blocked/rkn-domain.txt`, добавь `0.0.0.0` или `127.0.0.1` перед каждой строкой.
 
-**Xray / sing-box / v2ray** — `blocklist/blocklist-wildcard.txt` как источник доменного правила маршрутизации, `Telegram/telegram-ipv4.txt` / `Telegram/telegram-ipv6.txt` — отдельным IP-правилом (например, чтобы направлять трафик Telegram напрямую, минуя прокси).
+**Xray / sing-box / v2ray** — `blocked/rkn-with-wildcard.txt` как источник доменного правила маршрутизации, `Telegram/telegram-ipv4.txt` / `Telegram/telegram-ipv6.txt` — отдельным IP-правилом (например, чтобы направлять трафик Telegram напрямую, минуя прокси).
 
-**MikroTik (RouterOS v7)** — DNS-based address-list из `blocklist/blocklist.txt`; поддомены — через `match-subdomain=yes` в правиле, без wildcard в самой строке.
+**MikroTik (RouterOS v7)** — DNS-based address-list из `blocked/rkn-domain.txt`; поддомены — через `match-subdomain=yes` в правиле, без wildcard в самой строке.
 
 ## Дисклеймер
 

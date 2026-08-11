@@ -24,10 +24,13 @@ Several actively maintained projects track domains blocked in Russia, each in it
 
 | File | Contents |
 |---|---|
-| `blocklist/blocklist.txt` | Domains, one per line, no wildcards — maximum compatibility (hosts files, MikroTik `match-subdomain=yes`, exact-match blockers) |
-| `blocklist/blocklist-wildcard.txt` | Same domains, with a `*.` prefix where a source indicates subdomain blocking — for AdGuard Home, sing-box, and other wildcard-aware tools |
+| `blocked/rkn-domain.txt` | Domains, one per line, no wildcards — maximum compatibility (hosts files, MikroTik `match-subdomain=yes`, exact-match blockers) |
+| `blocked/rkn-with-wildcard.txt` | Same domains, with a `*.` prefix where a source indicates subdomain blocking — for AdGuard Home, sing-box, and other wildcard-aware tools |
+| `blocked/ipv4.txt` | IPv4 subnets blocked in Russia |
+| `blocked/ipv6.txt` | IPv6 subnets blocked in Russia (if a current source exists for this release - see status table) |
 | `Telegram/telegram-ipv4.txt` | Telegram's current IPv4 subnets, from the official CIDR source |
 | `Telegram/telegram-ipv6.txt` | Telegram's current IPv6 subnets, from the official CIDR source |
+| `corp/*/…` | Domains and IP ranges for major Russian services (Yandex, VK, Mail Group, Sberbank, OZON, Wildberries, Avito, the banking sector) — in progress |
 
 ## List status
 
@@ -40,24 +43,24 @@ _Last checked by automation: 2026-08-11 12:10 UTC_
 |---|---|---|---|
 | `Telegram/telegram-ipv4.txt` | 2026-08-11 12:10 UTC | 9 | `1fd618d8fde9205840fe6be10f90d66c` |
 | `Telegram/telegram-ipv6.txt` | 2026-08-11 12:10 UTC | 5 | `b40d044727025c645af8e507265b94e9` |
-| `blocklist/blocklist.txt` | not published yet | — | — |
-| `blocklist/blocklist-wildcard.txt` | not published yet | — | — |
+| `blocked/rkn-domain.txt` | not published yet | — | — |
+| `blocked/rkn-with-wildcard.txt` | not published yet | — | — |
 <!-- STATUS-TABLE:END -->
 
 ## Update schedule
 
-The Telegram lists (`Telegram/telegram-ipv4.txt`, `Telegram/telegram-ipv6.txt`) are refreshed **every 12 hours** straight from the official source. Domain lists (`blocklist/blocklist.txt`, `blocklist/blocklist-wildcard.txt`) are refreshed **weekly**: sources are re-fetched, normalized to a single format, merged, and deduplicated — domains are only ever added, never removed even if a source drops them. Exact last-update time per file is in the table above.
+The Telegram lists (`Telegram/telegram-ipv4.txt`, `Telegram/telegram-ipv6.txt`) are refreshed **every 12 hours** straight from the official source. Domain lists (`blocked/rkn-domain.txt`, `blocked/rkn-with-wildcard.txt`) are refreshed **weekly**: sources are re-fetched, normalized to a single format, merged, and deduplicated — domains are only ever added, never removed even if a source drops them. Exact last-update time per file is in the table above.
 
 ## Format
 
-**Domains** — plain text, one per line, no comments. In `blocklist-wildcard.txt`, some lines start with `*.`.
+**Domains** — plain text, one per line, no comments. In `rkn-with-wildcard.txt`, some lines start with `*.`.
 
 ```
 example.com
 *.another-domain.ru
 ```
 
-**IP (Telegram)** — CIDR notation, one range per line, IPv4 and IPv6 in separate files.
+**IP (Telegram, blocked/ipv4.txt, blocked/ipv6.txt)** — CIDR notation, one range per line, IPv4 and IPv6 in separate files.
 
 ```
 91.108.56.0/22
@@ -68,14 +71,14 @@ example.com
 
 **AdGuard Home / Pi-hole** — add as a custom blocklist source:
 ```
-https://raw.githubusercontent.com/AbbeyLubber/ru-blocklist-aggregator/main/blocklist/blocklist-wildcard.txt
+https://raw.githubusercontent.com/AbbeyLubber/ru-blocklist-aggregator/main/blocked/rkn-with-wildcard.txt
 ```
 
-**hosts file** — use `blocklist/blocklist.txt`, prepend each line with `0.0.0.0` or `127.0.0.1`.
+**hosts file** — use `blocked/rkn-domain.txt`, prepend each line with `0.0.0.0` or `127.0.0.1`.
 
-**Xray / sing-box / v2ray** — use `blocklist/blocklist-wildcard.txt` as a domain-matcher source, `Telegram/telegram-ipv4.txt` / `Telegram/telegram-ipv6.txt` for a separate IP-based rule (e.g. routing Telegram traffic directly, bypassing the proxy).
+**Xray / sing-box / v2ray** — use `blocked/rkn-with-wildcard.txt` as a domain-matcher source, `Telegram/telegram-ipv4.txt` / `Telegram/telegram-ipv6.txt` for a separate IP-based rule (e.g. routing Telegram traffic directly, bypassing the proxy).
 
-**MikroTik (RouterOS v7)** — build a DNS-based address-list from `blocklist/blocklist.txt`; subdomains via `match-subdomain=yes` on the rule, no wildcard needed in the string itself.
+**MikroTik (RouterOS v7)** — build a DNS-based address-list from `blocked/rkn-domain.txt`; subdomains via `match-subdomain=yes` on the rule, no wildcard needed in the string itself.
 
 ## Disclaimer
 
