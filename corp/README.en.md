@@ -40,12 +40,12 @@ Subsidiary entities in other countries (e.g. Wildberries KZ/GE/BY — same legal
 The table below is regenerated automatically on every publish — do not edit by hand.
 
 <!-- STATUS-TABLE:START -->
-_Last checked by automation: 2026-08-12 13:24 UTC_
+_Last checked by automation: 2026-08-12 23:06 UTC_
 
 | File | Updated | Lines | MD5 |
 |---|---|---|---|
-| `corp/yandex/ya-domain.txt` | 2026-08-11 15:06 UTC | 133 | `5b5885132ce7770c2e25e370366ad712` |
-| `corp/yandex/ya-ipv4.txt` | 2026-08-11 15:06 UTC | 122 | `6b06ba960ce6455b3b6f40f985f2a6f9` |
+| `corp/yandex/ya-domain.txt` | 2026-08-12 23:05 UTC | 134 | `0b18069fa8aba96ec880acfa5b16dc8b` |
+| `corp/yandex/ya-ipv4.txt` | 2026-08-12 23:05 UTC | 123 | `9fe9fbaa741e2e33805b8fb412b22f15` |
 | `corp/yandex/ya-ipv6.txt` | 2026-08-11 15:06 UTC | 30 | `845aaeac1287d0439c6bc25fec1ff7c5` |
 | `corp/vk/vk-domain.txt` | 2026-08-11 15:05 UTC | 52 | `b8618fc1530ce8d186ee7ec74809176a` |
 | `corp/vk/vk-ipv4.txt` | 2026-08-11 15:05 UTC | 48 | `8a75327702e3264e1bee14d415d95f7e` |
@@ -54,7 +54,7 @@ _Last checked by automation: 2026-08-12 13:24 UTC_
 | `corp/mailgroup/mg-ipv4.txt` | 2026-08-11 15:05 UTC | 109 | `faacdf558fda28a9e9a13e7bb5a0980a` |
 | `corp/mailgroup/mg-ipv6.txt` | 2026-08-11 15:05 UTC | 9 | `5c310e7e1dd8ff2026c1778e26074e5f` |
 | `corp/sber/sber-domain.txt` | 2026-08-11 15:05 UTC | 101 | `c2d94bc87d09505210d10290bd64af42` |
-| `corp/sber/sber-ipv4.txt` | 2026-08-11 21:03 UTC | 36 | `140d2855ddc1d9418587acb5d9602e1e` |
+| `corp/sber/sber-ipv4.txt` | 2026-08-12 23:05 UTC | 37 | `b0c042bc8646a77c719ede3cdc5e844e` |
 | `corp/sber/sber-ipv6.txt` | 2026-08-11 15:05 UTC | 1 | `2559126dfbba4263bd5551d697137010` |
 | `corp/ozon/ozon-domain.txt` | 2026-08-11 15:05 UTC | 62 | `02b73b445034a78c12872e74b46e97ed` |
 | `corp/ozon/ozon-ipv4.txt` | 2026-08-11 15:05 UTC | 9 | `893e6fd94879ee0848a2a34e7639f15b` |
