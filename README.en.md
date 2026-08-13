@@ -39,7 +39,7 @@ This repo also maintains `corp/` — a separate set of domain and IP-range lists
 The table below is regenerated automatically on every publish — do not edit by hand. `corp/` file status lives in its own table in [corp/README.en.md](corp/README.en.md), to keep this one short.
 
 <!-- STATUS-TABLE:START -->
-_Last checked by automation: 2026-08-12 23:06 UTC_
+_Last checked by automation: 2026-08-13 01:24 UTC_
 
 | File | Updated | Lines | MD5 |
 |---|---|---|---|
