@@ -47,8 +47,8 @@ _Last checked by automation: 2026-08-21 20:58 UTC_
 | `Telegram/telegram-ipv6.txt` | 2026-08-11 12:10 UTC | 5 | `b40d044727025c645af8e507265b94e9` |
 | `blocked/rkn-domain.txt` | 2026-08-11 13:11 UTC | 1642507 | `f9669b97b0441e1f710ae51ad440244a` |
 | `blocked/rkn-with-wildcard.txt` | 2026-08-11 13:11 UTC | 3262892 | `41b4143479bfbf7045f5e90a98611bbc` |
-| `blocked/ipv4.txt` | 2026-08-14 08:24 UTC | 55327 | `6754ee2393ab0334b8e26e7adb028e54` |
-| `blocked/ipv6.txt` | 2026-08-11 20:13 UTC | 2971 | `49556c9297c3b3cc251bc66764a90071` |
+| `blocked/ipv4.txt` | 2026-08-21 20:58 UTC | 55918 | `cfa68f9cd3de50597a599042b4e6830a` |
+| `blocked/ipv6.txt` | 2026-08-21 20:58 UTC | 3050 | `2636f2259a49b7b6fc39c19ff52c9fc7` |
 <!-- STATUS-TABLE:END -->
 
 ## Update schedule
