@@ -30,16 +30,16 @@ This repo also maintains `corp/` — a separate set of domain and IP-range lists
 | `blocked/rkn-with-wildcard.txt` | Same domains, with a `*.` prefix where a source indicates subdomain blocking — for AdGuard Home, sing-box, and other wildcard-aware tools |
 | `blocked/ipv4.txt` | IPv4 subnets blocked in Russia |
 | `blocked/ipv6.txt` | IPv6 subnets blocked in Russia (if a current source exists for this release - see status table) |
-| `Telegram/telegram-ipv4.txt` | Telegram IPv4 subnets: the official CIDR list **plus** the CDN networks Telegram's media is hosted on (see the note below the table) |
-| `Telegram/telegram-ipv6.txt` | Telegram IPv6 subnets: the official CIDR list **plus** the CDN networks Telegram's media is hosted on (see the note below the table) |
+| `Telegram/telegram-ipv4.txt` | Telegram IPv4 subnets: its own networks **plus** the CDNs its media is hosted on (see the note below the table) |
+| `Telegram/telegram-ipv6.txt` | Telegram IPv6 subnets: its own networks **plus** the CDNs its media is hosted on (see the note below the table) |
 | [`corp/`](corp/README.en.md) | Domains and IP ranges for major Russian services (Yandex, VK, Mail Group, Sberbank, OZON, Wildberries, Avito, banks) — a trust list, not a blocklist. Full folder descriptions and file table: [corp/README.en.md](corp/README.en.md) |
 
 
-> ⚠️ **About the Telegram lists.** They contain more than the ranges Telegram publishes officially: they also include the CDN addresses where the media actually lives — photos, videos, stickers, files. That means Google, Amazon CloudFront, Cloudflare, Hetzner and others.
+> ⚠️ **About the Telegram lists.** They contain more than Telegram's own network ranges: they also include the CDN addresses where the media actually lives — photos, videos, stickers, files.
 >
 > Without those networks the list covers Telegram's signalling but not its content delivery. With them coverage is complete — **but the same networks serve thousands of unrelated sites**, and any rule built on this list will catch those too. Choose deliberately: for "route all Telegram one way" this is what you want; for targeted blocking it is far too broad.
 >
-> Ranges belonging to Russian networks are stripped from the additional sources. Telegram's own list is never filtered.
+> Ranges belonging to Russian networks are excluded from these lists.
 
 ## List status
 
@@ -50,12 +50,12 @@ The table below is regenerated automatically on every publish — do not edit by
 A gap between the two is normal, not a sign of neglect. If a file was "updated" two weeks ago but checked today, the source simply hasn't changed and the list is still current. Files are rewritten only when the data really changes: otherwise the date would move on every run and stop meaning anything, and the commit history would fill up with empty updates.
 
 <!-- STATUS-TABLE:START -->
-_Last checked by automation: 2026-08-26 17:41 UTC_
+_Last checked by automation: 2026-08-26 18:07 UTC_
 
 | File | Updated | Lines | MD5 |
 |---|---|---|---|
-| `Telegram/telegram-ipv4.txt` | 2026-08-26 17:41 UTC | 148 | `6a2eb8beeed3f297b3d6a354e980d29b` |
-| `Telegram/telegram-ipv6.txt` | 2026-08-26 17:41 UTC | 41 | `ca34027fef80a9e65146cb6e5943ea97` |
+| `Telegram/telegram-ipv4.txt` | 2026-08-26 18:06 UTC | 144 | `ecb70d74399b72e406d9d9a781da1b58` |
+| `Telegram/telegram-ipv6.txt` | 2026-08-26 18:07 UTC | 37 | `8424e58ff4b412ecd5fc282a7075ccaf` |
 | `blocked/rkn-domain.txt` | 2026-08-11 13:11 UTC | 1642507 | `f9669b97b0441e1f710ae51ad440244a` |
 | `blocked/rkn-with-wildcard.txt` | 2026-08-11 13:11 UTC | 3262892 | `41b4143479bfbf7045f5e90a98611bbc` |
 | `blocked/ipv4.txt` | 2026-08-21 20:58 UTC | 55918 | `cfa68f9cd3de50597a599042b4e6830a` |
@@ -66,11 +66,9 @@ _Last checked by automation: 2026-08-26 17:41 UTC_
 
 The lists here follow two different principles — which determines what to expect from them.
 
-**Mirror of the sources — the `Telegram/` folder.** These files are rebuilt from the sources rather than appended to: if a range disappears from every source, it disappears here too.
+**Mirror — the `Telegram/` folder.** These files are rebuilt in full rather than appended to: a range that is no longer current disappears from here.
 
-There are three sources. Telegram's own published list is authoritative — it goes in whole and is never filtered. Alongside it are two lists from [iplist.opencck.org](https://iplist.opencck.org), which are broader and include the CDN networks Telegram serves media through (Google, CloudFront, Cloudflare, Hetzner). That gives fuller coverage, but those same networks carry plenty of unrelated sites — worth knowing if you route traffic based on these lists.
-
-One filter is applied, and only to the additional sources: ranges belonging to Russian networks are removed. The reason is practical — these files feed a routing rule that sends everything listed abroad, while Russian services are meant to be reached from a Russian address. The filter is noted in each file's header.
+The lists cover Telegram's own networks plus the CDNs its media is served from. Ranges belonging to Russian networks are excluded.
 
 **Accumulator — the `blocked/` and `corp/` folders.** Entries are only ever added; nothing is removed automatically. If a domain or subnet disappears from a source, it stays in the list.
 
@@ -78,7 +76,7 @@ Why accumulate: an entry vanishing from one source does not mean the block was l
 
 | List | Source | Checked against source | Published | Principle |
 |---|---|---|---|---|
-| `Telegram/telegram-ipv4.txt`, `Telegram/telegram-ipv6.txt` | Telegram's official CIDR list + two [iplist.opencck.org](https://iplist.opencck.org) lists | every 12 hours | only when the data changes | mirror of sources |
+| `Telegram/telegram-ipv4.txt`, `Telegram/telegram-ipv6.txt` | Telegram networks + media CDNs | every 12 hours | only when the data changes | mirror |
 | `blocked/rkn-domain.txt`, `blocked/rkn-with-wildcard.txt` | four projects (see "Domain sources" above) | Noktomezo every 12 hours; full merge of all four weekly | weekly, Friday 08:00 UTC | accumulator |
 | `blocked/ipv4.txt` | Noktomezo, `ipsets/full.lst` | every 12 hours | weekly, Friday 08:00 UTC | accumulator |
 | `blocked/ipv6.txt` | [bol-van/rulist](https://github.com/bol-van/rulist), `reestr_smart6.txt` | weekly | weekly, Friday 08:00 UTC | accumulator |
