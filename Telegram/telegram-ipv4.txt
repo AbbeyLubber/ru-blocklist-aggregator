@@ -1,10 +1,19 @@
 # Telegram IPv4 ranges
 #
-# Source: https://core.telegram.org/resources/cidr.txt
-#         (published by Telegram themselves - this file is a verbatim
-#          copy of the IPv4 entries from it, nothing added or filtered)
+# Sources (merged, deduplicated):
+#   1. https://core.telegram.org/resources/cidr.txt
+#      Telegram's own published list - authoritative, never filtered.
+#   2. https://iplist.opencck.org/?format=comma&data=cidr4&site=telegram.org
+#      Community-maintained. Includes the CDN ranges Telegram serves
+#      media through (Google, CloudFront, Cloudflare, Hetzner and
+#      others) - useful for full coverage, but note that those
+#      networks also carry unrelated traffic.
 #
-# Verified against the source automatically every 12 hours.
+# Filtering applied to source 2 only: ranges that belong to Russian
+# networks are removed, because this list is consumed by a routing
+# rule that sends everything in it abroad. Source 1 is never filtered.
+#
+# Refreshed automatically every 12 hours.
 #
 # Telegram changes these ranges rarely. This file is rewritten only when
 # the ranges themselves change, so an older date below means the list is
@@ -12,7 +21,7 @@
 # the most recent verification is in the status table in the repository
 # README.
 #
-# Last changed: 2026-08-26 17:39 UTC
+# Last changed: 2026-08-26 17:41 UTC
 # Ranges: 120
 #
 # Format: CIDR, one range per line. Lines starting with # are comments.
