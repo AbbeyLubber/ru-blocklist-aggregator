@@ -59,7 +59,11 @@ _Last checked by automation: 2026-08-26 17:41 UTC_
 
 The lists here follow two different principles — which determines what to expect from them.
 
-**Mirror of the source — the `Telegram/` folder.** These files contain exactly what Telegram publishes in its official source: nothing added, nothing filtered out. If Telegram drops a range from its list, it disappears here too.
+**Mirror of the sources — the `Telegram/` folder.** These files are rebuilt from the sources rather than appended to: if a range disappears from every source, it disappears here too.
+
+There are three sources. Telegram's own published list is authoritative — it goes in whole and is never filtered. Alongside it are two lists from [iplist.opencck.org](https://iplist.opencck.org), which are broader and include the CDN networks Telegram serves media through (Google, CloudFront, Cloudflare, Hetzner). That gives fuller coverage, but those same networks carry plenty of unrelated sites — worth knowing if you route traffic based on these lists.
+
+One filter is applied, and only to the additional sources: ranges belonging to Russian networks are removed. The reason is practical — these files feed a routing rule that sends everything listed abroad, while Russian services are meant to be reached from a Russian address. The filter is noted in each file's header.
 
 **Accumulator — the `blocked/` and `corp/` folders.** Entries are only ever added; nothing is removed automatically. If a domain or subnet disappears from a source, it stays in the list.
 
@@ -67,7 +71,7 @@ Why accumulate: an entry vanishing from one source does not mean the block was l
 
 | List | Source | Checked against source | Published | Principle |
 |---|---|---|---|---|
-| `Telegram/telegram-ipv4.txt`, `Telegram/telegram-ipv6.txt` | Telegram's official CIDR list | every 12 hours | only when the data changes | mirror |
+| `Telegram/telegram-ipv4.txt`, `Telegram/telegram-ipv6.txt` | Telegram's official CIDR list + two [iplist.opencck.org](https://iplist.opencck.org) lists | every 12 hours | only when the data changes | mirror of sources |
 | `blocked/rkn-domain.txt`, `blocked/rkn-with-wildcard.txt` | four projects (see "Domain sources" above) | Noktomezo every 12 hours; full merge of all four weekly | weekly, Friday 08:00 UTC | accumulator |
 | `blocked/ipv4.txt` | Noktomezo, `ipsets/full.lst` | every 12 hours | weekly, Friday 08:00 UTC | accumulator |
 | `blocked/ipv6.txt` | [bol-van/rulist](https://github.com/bol-van/rulist), `reestr_smart6.txt` | weekly | weekly, Friday 08:00 UTC | accumulator |
