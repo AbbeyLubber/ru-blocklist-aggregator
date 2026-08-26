@@ -38,6 +38,10 @@ This repo also maintains `corp/` — a separate set of domain and IP-range lists
 
 The table below is regenerated automatically on every publish — do not edit by hand. `corp/` file status lives in its own table in [corp/README.en.md](corp/README.en.md), to keep this one short.
 
+**How to read this table.** The "Updated" column shows when a file's contents **actually changed** — not when it was last checked. The "Last checked by automation" line above the table is when the sources were last compared against.
+
+A gap between the two is normal, not a sign of neglect. If a file was "updated" two weeks ago but checked today, the source simply hasn't changed and the list is still current. Files are rewritten only when the data really changes: otherwise the date would move on every run and stop meaning anything, and the commit history would fill up with empty updates.
+
 <!-- STATUS-TABLE:START -->
 _Last checked by automation: 2026-08-26 02:04 UTC_
 
@@ -51,9 +55,29 @@ _Last checked by automation: 2026-08-26 02:04 UTC_
 | `blocked/ipv6.txt` | 2026-08-21 20:58 UTC | 3050 | `2636f2259a49b7b6fc39c19ff52c9fc7` |
 <!-- STATUS-TABLE:END -->
 
-## Update schedule
+## How the lists are updated
 
-The Telegram lists (`Telegram/telegram-ipv4.txt`, `Telegram/telegram-ipv6.txt`) are refreshed **every 12 hours** straight from the official source. Domain lists (`blocked/rkn-domain.txt`, `blocked/rkn-with-wildcard.txt`) are refreshed **weekly**: sources are re-fetched, normalized to a single format, merged, and deduplicated — domains are only ever added, never removed even if a source drops them. Exact last-update time per file is in the table above. `corp/`'s schedule is documented in [corp/README.en.md](corp/README.en.md).
+The lists here follow two different principles — which determines what to expect from them.
+
+**Mirror of the source — the `Telegram/` folder.** These files contain exactly what Telegram publishes in its official source: nothing added, nothing filtered out. If Telegram drops a range from its list, it disappears here too.
+
+**Accumulator — the `blocked/` and `corp/` folders.** Entries are only ever added; nothing is removed automatically. If a domain or subnet disappears from a source, it stays in the list.
+
+Why accumulate: an entry vanishing from one source does not mean the block was lifted. Sources are incomplete, maintained by different teams, and periodically lose entries or change scope. Accumulating favours completeness — at the cost of some entries growing stale over time.
+
+| List | Source | Checked against source | Published | Principle |
+|---|---|---|---|---|
+| `Telegram/telegram-ipv4.txt`, `Telegram/telegram-ipv6.txt` | Telegram's official CIDR list | every 12 hours | only when the data changes | mirror |
+| `blocked/rkn-domain.txt`, `blocked/rkn-with-wildcard.txt` | four projects (see "Domain sources" above) | Noktomezo every 12 hours; full merge of all four weekly | weekly, Friday 08:00 UTC | accumulator |
+| `blocked/ipv4.txt` | Noktomezo, `ipsets/full.lst` | every 12 hours | weekly, Friday 08:00 UTC | accumulator |
+| `blocked/ipv6.txt` | [bol-van/rulist](https://github.com/bol-van/rulist), `reestr_smart6.txt` | weekly | weekly, Friday 08:00 UTC | accumulator |
+| [`corp/`](corp/README.en.md) | see [corp/README.en.md](corp/README.en.md) | weekly | weekly, Friday 08:00 UTC | accumulator |
+
+Everything updates automatically on a schedule, with no manual step. The exact last-change time per file is in the status table above.
+
+**Guard against corrupting a list.** Every download is sanity-checked for size. If a source temporarily returns an empty or suspiciously short response, the update is skipped and the previous version of the file is kept — a slightly stale working list beats one overwritten with incomplete data.
+
+The `corp/` schedule is documented in detail in [corp/README.en.md](corp/README.en.md).
 
 ## Format
 
@@ -64,7 +88,9 @@ example.com
 *.another-domain.ru
 ```
 
-**IP (Telegram, blocked/ipv4.txt, blocked/ipv6.txt)** — CIDR notation, one range per line, IPv4 and IPv6 in separate files.
+**IP (`blocked/ipv4.txt`, `blocked/ipv6.txt`)** — CIDR notation, one range per line, no comments. IPv4 and IPv6 live in separate files.
+
+**IP (`Telegram/`)** — the same CIDR notation, plus a header of lines starting with `#`: the source, the date it last changed, and the number of ranges. Tools that skip `#` lines (most do) read the file with no configuration change.
 
 ```
 91.108.56.0/22
