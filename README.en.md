@@ -43,7 +43,7 @@ The table below is regenerated automatically on every publish — do not edit by
 A gap between the two is normal, not a sign of neglect. If a file was "updated" two weeks ago but checked today, the source simply hasn't changed and the list is still current. Files are rewritten only when the data really changes: otherwise the date would move on every run and stop meaning anything, and the commit history would fill up with empty updates.
 
 <!-- STATUS-TABLE:START -->
-_Last checked by automation: 2026-08-26 02:23 UTC_
+_Last checked by automation: 2026-08-26 05:40 UTC_
 
 | File | Updated | Lines | MD5 |
 |---|---|---|---|
