@@ -1,3 +1,22 @@
+# Telegram IPv6 ranges
+#
+# Source: https://core.telegram.org/resources/cidr.txt
+#         (published by Telegram themselves - this file is a verbatim
+#          copy of the IPv6 entries from it, nothing added or filtered)
+#
+# Verified against the source automatically every 12 hours.
+#
+# Telegram changes these ranges rarely. This file is rewritten only when
+# the ranges themselves change, so an older date below means the list is
+# still current - not that it stopped being maintained. The timestamp of
+# the most recent verification is in the status table in the repository
+# README.
+#
+# Last changed: 2026-08-26 02:04 UTC
+# Ranges: 5
+#
+# Format: CIDR, one range per line. Lines starting with # are comments.
+
 2001:67c:4e8::/48
 2001:b28:f23c::/48
 2001:b28:f23d::/48
