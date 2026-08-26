@@ -30,9 +30,16 @@ This repo also maintains `corp/` — a separate set of domain and IP-range lists
 | `blocked/rkn-with-wildcard.txt` | Same domains, with a `*.` prefix where a source indicates subdomain blocking — for AdGuard Home, sing-box, and other wildcard-aware tools |
 | `blocked/ipv4.txt` | IPv4 subnets blocked in Russia |
 | `blocked/ipv6.txt` | IPv6 subnets blocked in Russia (if a current source exists for this release - see status table) |
-| `Telegram/telegram-ipv4.txt` | Telegram's current IPv4 subnets, from the official CIDR source |
-| `Telegram/telegram-ipv6.txt` | Telegram's current IPv6 subnets, from the official CIDR source |
+| `Telegram/telegram-ipv4.txt` | Telegram IPv4 subnets: the official CIDR list **plus** the CDN networks Telegram's media is hosted on (see the note below the table) |
+| `Telegram/telegram-ipv6.txt` | Telegram IPv6 subnets: the official CIDR list **plus** the CDN networks Telegram's media is hosted on (see the note below the table) |
 | [`corp/`](corp/README.en.md) | Domains and IP ranges for major Russian services (Yandex, VK, Mail Group, Sberbank, OZON, Wildberries, Avito, banks) — a trust list, not a blocklist. Full folder descriptions and file table: [corp/README.en.md](corp/README.en.md) |
+
+
+> ⚠️ **About the Telegram lists.** They contain more than the ranges Telegram publishes officially: they also include the CDN addresses where the media actually lives — photos, videos, stickers, files. That means Google, Amazon CloudFront, Cloudflare, Hetzner and others.
+>
+> Without those networks the list covers Telegram's signalling but not its content delivery. With them coverage is complete — **but the same networks serve thousands of unrelated sites**, and any rule built on this list will catch those too. Choose deliberately: for "route all Telegram one way" this is what you want; for targeted blocking it is far too broad.
+>
+> Ranges belonging to Russian networks are stripped from the additional sources. Telegram's own list is never filtered.
 
 ## List status
 
