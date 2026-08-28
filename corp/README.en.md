@@ -40,12 +40,12 @@ Subsidiary entities in other countries (e.g. Wildberries KZ/GE/BY — same legal
 The table below is regenerated automatically on every publish — do not edit by hand.
 
 <!-- STATUS-TABLE:START -->
-_Last checked by automation: 2026-08-28 05:41 UTC_
+_Last checked by automation: 2026-08-28 08:01 UTC_
 
 | File | Updated | Lines | MD5 |
 |---|---|---|---|
 | `corp/yandex/ya-domain.txt` | 2026-08-12 23:05 UTC | 134 | `0b18069fa8aba96ec880acfa5b16dc8b` |
-| `corp/yandex/ya-ipv4.txt` | 2026-08-12 23:05 UTC | 123 | `9fe9fbaa741e2e33805b8fb412b22f15` |
+| `corp/yandex/ya-ipv4.txt` | 2026-08-28 08:01 UTC | 122 | `e662e168f5eacb58732568a2c460f5dc` |
 | `corp/yandex/ya-ipv6.txt` | 2026-08-11 15:06 UTC | 30 | `845aaeac1287d0439c6bc25fec1ff7c5` |
 | `corp/vk/vk-domain.txt` | 2026-08-11 15:05 UTC | 52 | `b8618fc1530ce8d186ee7ec74809176a` |
 | `corp/vk/vk-ipv4.txt` | 2026-08-11 15:05 UTC | 48 | `8a75327702e3264e1bee14d415d95f7e` |
@@ -66,7 +66,7 @@ _Last checked by automation: 2026-08-28 05:41 UTC_
 | `corp/avito/av-ipv4.txt` | 2026-08-11 15:05 UTC | 17 | `c6ae2ebacb4d38a3794f33421bd9f610` |
 | `corp/avito/av-ipv6.txt` | 2026-08-11 15:05 UTC | 0 | `d41d8cd98f00b204e9800998ecf8427e` |
 | `corp/banks/bank-domain.txt` | 2026-08-11 21:03 UTC | 43 | `baaa9ef7a63f2f8ee9f5ca572aadaf85` |
-| `corp/banks/bank-ipv4.txt` | 2026-08-11 21:03 UTC | 106 | `42f0112c6e1539c9edeaefc7e5fec19c` |
+| `corp/banks/bank-ipv4.txt` | 2026-08-28 08:01 UTC | 107 | `f1c444eb15e98ab3dd327e80218f2512` |
 | `corp/banks/bank-ipv6.txt` | 2026-08-11 21:03 UTC | 1 | `47332936eb8c687efff5994e3aba06f1` |
 <!-- STATUS-TABLE:END -->
 
