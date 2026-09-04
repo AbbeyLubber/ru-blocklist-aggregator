@@ -40,12 +40,12 @@ Subsidiary entities in other countries (e.g. Wildberries KZ/GE/BY — same legal
 The table below is regenerated automatically on every publish — do not edit by hand.
 
 <!-- STATUS-TABLE:START -->
-_Last checked by automation: 2026-09-04 05:44 UTC_
+_Last checked by automation: 2026-09-04 08:01 UTC_
 
 | File | Updated | Lines | MD5 |
 |---|---|---|---|
 | `corp/yandex/ya-domain.txt` | 2026-08-12 23:05 UTC | 134 | `0b18069fa8aba96ec880acfa5b16dc8b` |
-| `corp/yandex/ya-ipv4.txt` | 2026-08-28 08:01 UTC | 122 | `e662e168f5eacb58732568a2c460f5dc` |
+| `corp/yandex/ya-ipv4.txt` | 2026-09-04 08:01 UTC | 124 | `decdb85a70e67fafdbef79ac9147e953` |
 | `corp/yandex/ya-ipv6.txt` | 2026-08-11 15:06 UTC | 30 | `845aaeac1287d0439c6bc25fec1ff7c5` |
 | `corp/vk/vk-domain.txt` | 2026-08-11 15:05 UTC | 52 | `b8618fc1530ce8d186ee7ec74809176a` |
 | `corp/vk/vk-ipv4.txt` | 2026-08-11 15:05 UTC | 48 | `8a75327702e3264e1bee14d415d95f7e` |
