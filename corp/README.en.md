@@ -40,7 +40,7 @@ Subsidiary entities in other countries (e.g. Wildberries KZ/GE/BY — same legal
 The table below is regenerated automatically on every publish — do not edit by hand.
 
 <!-- STATUS-TABLE:START -->
-_Last checked by automation: 2026-09-03 17:43 UTC_
+_Last checked by automation: 2026-09-04 05:44 UTC_
 
 | File | Updated | Lines | MD5 |
 |---|---|---|---|
