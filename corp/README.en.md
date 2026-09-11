@@ -40,18 +40,18 @@ Subsidiary entities in other countries (e.g. Wildberries KZ/GE/BY — same legal
 The table below is regenerated automatically on every publish — do not edit by hand.
 
 <!-- STATUS-TABLE:START -->
-_Last checked by automation: 2026-09-11 06:03 UTC_
+_Last checked by automation: 2026-09-11 08:03 UTC_
 
 | File | Updated | Lines | MD5 |
 |---|---|---|---|
 | `corp/yandex/ya-domain.txt` | 2026-08-12 23:05 UTC | 134 | `0b18069fa8aba96ec880acfa5b16dc8b` |
-| `corp/yandex/ya-ipv4.txt` | 2026-09-04 08:01 UTC | 124 | `decdb85a70e67fafdbef79ac9147e953` |
+| `corp/yandex/ya-ipv4.txt` | 2026-09-11 08:03 UTC | 125 | `0e514e071442dc56af7e4dbaa3439a8c` |
 | `corp/yandex/ya-ipv6.txt` | 2026-08-11 15:06 UTC | 30 | `845aaeac1287d0439c6bc25fec1ff7c5` |
 | `corp/vk/vk-domain.txt` | 2026-08-11 15:05 UTC | 52 | `b8618fc1530ce8d186ee7ec74809176a` |
 | `corp/vk/vk-ipv4.txt` | 2026-08-11 15:05 UTC | 48 | `8a75327702e3264e1bee14d415d95f7e` |
 | `corp/vk/vk-ipv6.txt` | 2026-08-11 15:06 UTC | 14 | `60cc0911e9a017c402a59920ed3152d2` |
 | `corp/mailgroup/mg-domain.txt` | 2026-08-11 15:05 UTC | 300 | `38ce0639f0c742c69be23f924b657679` |
-| `corp/mailgroup/mg-ipv4.txt` | 2026-08-11 15:05 UTC | 109 | `faacdf558fda28a9e9a13e7bb5a0980a` |
+| `corp/mailgroup/mg-ipv4.txt` | 2026-09-11 08:03 UTC | 110 | `6ba8245bef5e832d2ae201daeed6c302` |
 | `corp/mailgroup/mg-ipv6.txt` | 2026-08-11 15:05 UTC | 9 | `5c310e7e1dd8ff2026c1778e26074e5f` |
 | `corp/sber/sber-domain.txt` | 2026-08-11 15:05 UTC | 101 | `c2d94bc87d09505210d10290bd64af42` |
 | `corp/sber/sber-ipv4.txt` | 2026-08-21 20:40 UTC | 36 | `6f3c133d42c71c9d249cb3c410e78601` |
@@ -60,7 +60,7 @@ _Last checked by automation: 2026-09-11 06:03 UTC_
 | `corp/ozon/ozon-ipv4.txt` | 2026-08-11 15:05 UTC | 9 | `893e6fd94879ee0848a2a34e7639f15b` |
 | `corp/ozon/ozon-ipv6.txt` | 2026-08-11 15:05 UTC | 0 | `d41d8cd98f00b204e9800998ecf8427e` |
 | `corp/wildberries/wb-domain.txt` | 2026-08-11 15:06 UTC | 114 | `056a2a40b7b26ddd42af6e14a162b486` |
-| `corp/wildberries/wb-ipv4.txt` | 2026-08-11 15:06 UTC | 29 | `407f18fd3ac29fb575acad8e301e06d2` |
+| `corp/wildberries/wb-ipv4.txt` | 2026-09-11 08:03 UTC | 28 | `fa1c56a59b9ca1eb008a155c493ddc7c` |
 | `corp/wildberries/wb-ipv6.txt` | 2026-08-11 15:06 UTC | 12 | `5fa643d734b3715d2326ca9315169605` |
 | `corp/avito/av-domain.txt` | 2026-08-11 15:05 UTC | 3 | `b47d2fb44183ea8a676ec4f548df4014` |
 | `corp/avito/av-ipv4.txt` | 2026-08-11 15:05 UTC | 17 | `c6ae2ebacb4d38a3794f33421bd9f610` |
