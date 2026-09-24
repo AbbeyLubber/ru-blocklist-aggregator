@@ -50,12 +50,12 @@ The table below is regenerated automatically on every publish — do not edit by
 A gap between the two is normal, not a sign of neglect. If a file was "updated" two weeks ago but checked today, the source simply hasn't changed and the list is still current. Files are rewritten only when the data really changes: otherwise the date would move on every run and stop meaning anything, and the commit history would fill up with empty updates.
 
 <!-- STATUS-TABLE:START -->
-_Last checked by automation: 2026-09-24 06:09 UTC_
+_Last checked by automation: 2026-09-24 18:10 UTC_
 
 | File | Updated | Lines | MD5 |
 |---|---|---|---|
-| `Telegram/telegram-ipv4.txt` | 2026-09-24 06:09 UTC | 151 | `3b698eb90114fc7f5b12348f93d114d9` |
-| `Telegram/telegram-ipv6.txt` | 2026-09-24 06:09 UTC | 37 | `ba560ec26d3d88d97745eeb9de3467b8` |
+| `Telegram/telegram-ipv4.txt` | 2026-09-24 18:09 UTC | 151 | `d500d3f086a885aabbdcabcfd023aa02` |
+| `Telegram/telegram-ipv6.txt` | 2026-09-24 18:09 UTC | 37 | `b8a9c2ce63326ff4a131d86b30a52e3c` |
 | `blocked/rkn-domain.txt` | 2026-09-11 09:17 UTC | 1707948 | `673e0edb2ae964f6ee1733912d4301c6` |
 | `blocked/rkn-with-wildcard.txt` | 2026-09-11 09:17 UTC | 3364685 | `011b1bfbbbe6e896dfbeaaf67b6aae01` |
 | `blocked/ipv4.txt` | 2026-09-18 08:33 UTC | 60902 | `f01143c8da300b5bafc61c037c2d2726` |
