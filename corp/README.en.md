@@ -40,13 +40,13 @@ Subsidiary entities in other countries (e.g. Wildberries KZ/GE/BY — same legal
 The table below is regenerated automatically on every publish — do not edit by hand.
 
 <!-- STATUS-TABLE:START -->
-_Last checked by automation: 2026-09-25 06:09 UTC_
+_Last checked by automation: 2026-09-25 08:03 UTC_
 
 | File | Updated | Lines | MD5 |
 |---|---|---|---|
 | `corp/yandex/ya-domain.txt` | 2026-08-12 23:05 UTC | 134 | `0b18069fa8aba96ec880acfa5b16dc8b` |
-| `corp/yandex/ya-ipv4.txt` | 2026-09-18 08:04 UTC | 126 | `524352bed0c7f08f766e3d8a6e9cc360` |
-| `corp/yandex/ya-ipv6.txt` | 2026-08-11 15:06 UTC | 30 | `845aaeac1287d0439c6bc25fec1ff7c5` |
+| `corp/yandex/ya-ipv4.txt` | 2026-09-25 08:03 UTC | 125 | `dd2591e0e12291d317afb826a94beafb` |
+| `corp/yandex/ya-ipv6.txt` | 2026-09-25 08:03 UTC | 33 | `c0afb30c99a348a23d955362c8643282` |
 | `corp/vk/vk-domain.txt` | 2026-08-11 15:05 UTC | 52 | `b8618fc1530ce8d186ee7ec74809176a` |
 | `corp/vk/vk-ipv4.txt` | 2026-08-11 15:05 UTC | 48 | `8a75327702e3264e1bee14d415d95f7e` |
 | `corp/vk/vk-ipv6.txt` | 2026-08-11 15:06 UTC | 14 | `60cc0911e9a017c402a59920ed3152d2` |
