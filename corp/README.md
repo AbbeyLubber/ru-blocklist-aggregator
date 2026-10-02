@@ -40,13 +40,13 @@
 Таблица ниже обновляется автоматически при каждой публикации — вручную не редактировать.
 
 <!-- STATUS-TABLE:START -->
-_Последняя проверка автоматикой: 2026-10-02 06:12 UTC_
+_Последняя проверка автоматикой: 2026-10-02 08:03 UTC_
 
 | Файл | Обновлено | Строк | MD5 |
 |---|---|---|---|
 | `corp/yandex/ya-domain.txt` | 2026-08-12 23:05 UTC | 134 | `0b18069fa8aba96ec880acfa5b16dc8b` |
-| `corp/yandex/ya-ipv4.txt` | 2026-09-25 08:03 UTC | 125 | `dd2591e0e12291d317afb826a94beafb` |
-| `corp/yandex/ya-ipv6.txt` | 2026-09-25 08:03 UTC | 33 | `c0afb30c99a348a23d955362c8643282` |
+| `corp/yandex/ya-ipv4.txt` | 2026-10-02 08:03 UTC | 115 | `d330e751cf0276ab439a308f115e6dea` |
+| `corp/yandex/ya-ipv6.txt` | 2026-10-02 08:03 UTC | 29 | `04dc4ab792a4442a104f22e1e788e2d3` |
 | `corp/vk/vk-domain.txt` | 2026-08-11 15:05 UTC | 52 | `b8618fc1530ce8d186ee7ec74809176a` |
 | `corp/vk/vk-ipv4.txt` | 2026-08-11 15:05 UTC | 48 | `8a75327702e3264e1bee14d415d95f7e` |
 | `corp/vk/vk-ipv6.txt` | 2026-08-11 15:06 UTC | 14 | `60cc0911e9a017c402a59920ed3152d2` |
@@ -66,7 +66,7 @@ _Последняя проверка автоматикой: 2026-10-02 06:12 UT
 | `corp/avito/av-ipv4.txt` | 2026-08-11 15:05 UTC | 17 | `c6ae2ebacb4d38a3794f33421bd9f610` |
 | `corp/avito/av-ipv6.txt` | 2026-08-11 15:05 UTC | 0 | `d41d8cd98f00b204e9800998ecf8427e` |
 | `corp/banks/bank-domain.txt` | 2026-08-11 21:03 UTC | 43 | `baaa9ef7a63f2f8ee9f5ca572aadaf85` |
-| `corp/banks/bank-ipv4.txt` | 2026-08-28 08:01 UTC | 107 | `f1c444eb15e98ab3dd327e80218f2512` |
+| `corp/banks/bank-ipv4.txt` | 2026-10-02 08:03 UTC | 106 | `68a61cb860d360ef882cf4b1db334ae1` |
 | `corp/banks/bank-ipv6.txt` | 2026-08-11 21:03 UTC | 1 | `47332936eb8c687efff5994e3aba06f1` |
 <!-- STATUS-TABLE:END -->
 
