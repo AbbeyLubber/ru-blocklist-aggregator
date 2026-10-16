@@ -44,16 +44,16 @@ _Последняя проверка автоматикой: 2026-10-16 08:03 UT
 
 | Файл | Обновлено | Строк | MD5 |
 |---|---|---|---|
-| `corp/yandex/ya-domain.txt` | 2026-08-12 23:05 UTC | 134 | `0b18069fa8aba96ec880acfa5b16dc8b` |
-| `corp/yandex/ya-ipv4.txt` | 2026-10-09 08:03 UTC | 125 | `dd2591e0e12291d317afb826a94beafb` |
-| `corp/yandex/ya-ipv6.txt` | 2026-10-09 08:03 UTC | 33 | `c0afb30c99a348a23d955362c8643282` |
+| `corp/yandex/ya-domain.txt` | 2026-10-16 08:03 UTC | 154 | `a5cd26de0f51cbd6054728dccb0a6506` |
+| `corp/yandex/ya-ipv4.txt` | 2026-10-16 08:03 UTC | 115 | `d330e751cf0276ab439a308f115e6dea` |
+| `corp/yandex/ya-ipv6.txt` | 2026-10-16 08:03 UTC | 29 | `04dc4ab792a4442a104f22e1e788e2d3` |
 | `corp/vk/vk-domain.txt` | 2026-08-11 15:05 UTC | 52 | `b8618fc1530ce8d186ee7ec74809176a` |
 | `corp/vk/vk-ipv4.txt` | 2026-08-11 15:05 UTC | 48 | `8a75327702e3264e1bee14d415d95f7e` |
 | `corp/vk/vk-ipv6.txt` | 2026-08-11 15:06 UTC | 14 | `60cc0911e9a017c402a59920ed3152d2` |
 | `corp/mailgroup/mg-domain.txt` | 2026-08-11 15:05 UTC | 300 | `38ce0639f0c742c69be23f924b657679` |
 | `corp/mailgroup/mg-ipv4.txt` | 2026-10-09 08:03 UTC | 112 | `a940b4a1e7fe416302ab57f25305b33f` |
 | `corp/mailgroup/mg-ipv6.txt` | 2026-08-11 15:05 UTC | 9 | `5c310e7e1dd8ff2026c1778e26074e5f` |
-| `corp/sber/sber-domain.txt` | 2026-08-11 15:05 UTC | 101 | `c2d94bc87d09505210d10290bd64af42` |
+| `corp/sber/sber-domain.txt` | 2026-10-16 08:03 UTC | 103 | `a0e34448d19ba3ecda85034cc97b2df0` |
 | `corp/sber/sber-ipv4.txt` | 2026-08-21 20:40 UTC | 36 | `6f3c133d42c71c9d249cb3c410e78601` |
 | `corp/sber/sber-ipv6.txt` | 2026-08-11 15:05 UTC | 1 | `2559126dfbba4263bd5551d697137010` |
 | `corp/ozon/ozon-domain.txt` | 2026-08-11 15:05 UTC | 62 | `02b73b445034a78c12872e74b46e97ed` |
