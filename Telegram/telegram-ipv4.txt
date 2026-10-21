@@ -17,8 +17,8 @@
 # the most recent verification is in the status table in the repository
 # README.
 #
-# Last changed: 2026-10-21 06:18 UTC
-# Ranges: 137
+# Last changed: 2026-10-21 18:18 UTC
+# Ranges: 138
 #
 # Format: CIDR, one range per line. Lines starting with # are comments.
 
@@ -80,6 +80,7 @@
 46.4.0.0/16
 52.28.133.13/32
 52.28.161.154/32
+52.57.18.104/32
 52.57.114.196/32
 52.59.23.48/32
 52.59.155.110/32
